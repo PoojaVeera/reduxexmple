@@ -6,12 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import countReducer from "./components/reducer";
 import { createStore } from "redux";
 
-const store = createStore(countReducer, 0);
+const store = createStore(countReducer);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>

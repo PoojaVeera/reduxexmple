@@ -1,6 +1,6 @@
 const initialState = 0;
 
-function countReducer(state = initialState, action) {
+function countReducer(state = 0, action) {
   const { type, payload } = action;
   switch (type) {
     case "INCREMENT":
