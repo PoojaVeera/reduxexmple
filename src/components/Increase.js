@@ -1,5 +1,5 @@
 import React from "react";
 
-export const Increase = () => {
-  return <div>Increase</div>;
+export const increase = () => {
+  return <div>increase</div>;
 };

@@ -1,7 +1,7 @@
-export const Increase = () => (dispatch) => {
+export const increase = () => (dispatch) => {
   dispatch({ type: "INCREMENT" });
 };
 
-export const Decrease = () => (dispatch) => {
+export const decrease = () => (dispatch) => {
   dispatch({ type: "DECREMENT" });
 };
