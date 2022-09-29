@@ -1,5 +1,3 @@
-const initialState = 0;
-
 function countReducer(state = 0, action) {
   const { type, payload } = action;
   switch (type) {
