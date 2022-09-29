@@ -1,7 +1,8 @@
-export const increase = () => (dispatch) => {
+const increase = () => (dispatch) => {
   dispatch({ type: "INCREMENT" });
 };
-
-export const decrease = () => (dispatch) => {
+const decrease = () => (dispatch) => {
   dispatch({ type: "DECREMENT" });
 };
+
+export default increase(decrease);

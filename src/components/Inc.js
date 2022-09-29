@@ -1,13 +1,13 @@
 import React from "react";
 import { Button, ButtonGroup } from "@mui/material";
 import { connect } from "react-redux";
-import { increase, decrease } from "./Action";
-export const Inc = ({ count, increase, decrease }) => {
+import increase from "./Action";
+import decrease from "./Action";
+const Inco = ({ count }) => {
   console.log(count);
   return (
     <div>
       <h3>count from inc.js:{count}</h3>
-
       <ButtonGroup variant="outlined" sx={{ width: "100px", height: "50px" }}>
         <Button onClick={() => increase()}>+</Button>
         <Button>0</Button>
@@ -25,4 +25,4 @@ const mapDispatchToProps = (dispatch) => {
     decrease: () => dispatch({ type: "DECREMENT" }),
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps);
+export default connect(mapStateToProps, mapDispatchToProps)(Inco);
