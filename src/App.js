@@ -1,9 +1,7 @@
 import "./App.css";
-import { increase, decrease } from "./components/Action";
 import { connect } from "react-redux";
 import Inc from "./components/Inc";
 export const App = ({ count }) => {
-  console.log(count);
   return (
     <div className="App">
       <h1>THIS IS REDUX EXAMPLE</h1>

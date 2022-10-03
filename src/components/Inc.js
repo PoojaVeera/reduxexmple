@@ -1,17 +1,18 @@
 import React from "react";
 import { Button, ButtonGroup } from "@mui/material";
-import { connect } from "react-redux";
-import increase from "./Action";
-import decrease from "./Action";
-const Inc = ({ count }) => {
-  console.log(count);
+import { connect, useDispatch, useSelector } from "react-redux";
+import { increase } from "./Action";
+import { decrease } from "./Action";
+const Inc = () => {
+  const count = useSelector((state) => state.count);
+  const dispatch = useDispatch();
   return (
     <div>
       <h3>count from inc.js:{count}</h3>
       <ButtonGroup variant="outlined" sx={{ width: "100px", height: "50px" }}>
-        <Button onClick={() => increase()}>+</Button>
+        <Button onClick={() => dispatch(increase())}>+</Button>
         <Button>0</Button>
-        <Button onClick={() => decrease()}>-</Button>
+        <Button onClick={() => dispatch(decrease())}>-</Button>
       </ButtonGroup>
     </div>
   );
