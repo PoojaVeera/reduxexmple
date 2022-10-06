@@ -11,14 +11,14 @@ const Inc = () => {
       <h3>count from inc.js:{count}</h3>
       <ButtonGroup variant="outlined" sx={{ width: "100px", height: "50px" }}>
         <Button onClick={() => dispatch(increase())}>+</Button>
-        <Button>0</Button>
+        <Button>c</Button>
         <Button onClick={() => dispatch(decrease())}>-</Button>
       </ButtonGroup>
     </div>
   );
 };
 const mapStateToProps = (state) => ({
-  count: state,
+  result: state,
 });
 const mapDispatchToProps = (dispatch) => {
   return {
